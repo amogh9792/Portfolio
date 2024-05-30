@@ -1807,3 +1807,26 @@ main {
   .timeline-text { max-width: 700px; }
 
 }
+
+@media (max-width: 768px) {
+
+  /* General Styles */
+  body { font-size: 16px; }  /* Increase base font size */
+  .container { padding: 20px; }  /* Adjust paddings for smaller screens */
+
+  /* Navigation */
+  .navbar { display: flex; flex-direction: column; align-items: center; gap: 10px; }  /* Stack navbar items vertically */
+  .navbar-link { font-size: 14px; }  /* Decrease link font size */
+
+  /* Content Areas */
+  .content { margin: 0 auto; max-width: 90%; }  /* Center content and limit width */
+  .image-wrapper img { width: 100%; }  /* Ensure images scale to fit width */
+
+  /* Specific Sections (if needed) */
+  .service-list { grid-template-columns: 1fr; }  /* Show services in a single column */
+  .testimonials-item, .clients-item { min-width: 100%; }  /* Make testimonials/clients full width  */
+  .project-list { grid-template-columns: repeat(1, 1fr); }  /* Show projects in a single column */
+
+  /* Additional Adjustments as needed */
+
+}
