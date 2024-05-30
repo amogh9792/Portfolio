@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telco Customer Churn Prediction Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #282c34;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77A3A0 3px solid;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        header li {
+            padding: 0 20px;
+        }
+
+        .showcase {
+            min-height: 400px;
+            background: url('assets/images/') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .showcase::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .showcase h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .showcase p {
+            font-size: 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px 0;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .section p {
+            color: #555;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            background: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: #77A3A0 5px solid;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+
+        .section ul li:hover {
+            background: #e0e0e0;
+        }
+
+        footer {
+            background: #282c34;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 -4px 2px -2px gray;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        a {
+            color: #77A3A0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #5d8378;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="showcase">
+        <div class="container">
+            <h1>Predicting Customer Churn in Telecom</h1>
+            <p>Using Machine Learning for Predictive Analytics in Telecommunications</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="section">
+            <h2>Project Overview</h2>
+            <img src="assets/images/project_overview.jpg" alt="Project Overview">
+            <p>This project revolves around predicting customer churn in a telecommunications company using machine learning. The project follows a structured workflow encompassing exploratory data analysis (EDA), data ingestion, transformation, validation, cleaning, model building, evaluation, and performance metrics calculation. Additionally, the model is deployed using AWS Lambda function with S3 bucket integration and GitHub Actions for automation.</p>
+        </section>
+
+        <section class="section">
+            <h2>Exploratory Data Analysis (EDA)</h2>
+            <img src="assets/images/eda.avif" alt="Exploratory Data Analysis">
+            <p>This initial phase involves exploring the dataset to gain insights into customer behavior, identify patterns, and understand the distribution of features. Visualizations and statistical analysis aid in uncovering relevant trends.</p>
+        </section>
+
+        <section class="section">
+            <h2>Data Ingestion, Transformation, Validation, and Cleaning</h2>
+            <img src="assets/images/data_ingestion.png" alt="Data Cleaning">
+            <p>Data is ingested from various sources and undergoes transformation to ensure consistency and compatibility. Validation checks are performed to identify and handle missing values, outliers, and inconsistencies. Cleaning procedures involve data preprocessing steps such as encoding categorical variables, feature scaling, and handling imbalanced classes.</p>
+        </section>
+
+        <section class="section">
+            <h2>Model Building</h2>
+            <img src="assets/images/model_build.png" alt="Model Building">
+            <p>Machine learning models are trained on the preprocessed dataset to predict customer churn. Various algorithms such as logistic regression, decision trees, random forests, and gradient boosting are explored to identify the best-performing model.</p>
+        </section>
+
+        <section class="section">
+            <h2>Model Evaluation</h2>
+            <img src="assets/images/model_evaluation.png" alt="Model Evaluation">
+            <p>The trained models are evaluated using performance metrics such as accuracy, precision, recall, F1-score, and ROC-AUC to assess their effectiveness in predicting churn.</p>
+        </section>
+
+        <section class="section">
+            <h2>Model Deployment</h2>
+            <img src="assets/images/model_deployment.png" alt="Model Deployment">
+            <p>The selected model is deployed using AWS Lambda function, allowing for real-time predictions. Integration with an S3 bucket facilitates data storage and retrieval. GitHub Actions are employed for continuous integration and deployment (CI/CD) to automate the deployment process.</p>
+        </section>
+
+        <section class="section">
+            <h2>Solution Implemented</h2>
+            <ul>
+                <li><strong>EDA Notebook:</strong> Contains exploratory data analysis, visualizations, and statistical summaries.</li>
+                <li><strong>Data Preprocessing Script:</strong> Performs data ingestion, transformation, validation, and cleaning tasks to prepare the dataset for modeling.</li>
+                <li><strong>Model Building Script:</strong> Implements machine learning algorithms, trains models, and evaluates their performance using cross-validation techniques.</li>
+                <li><strong>Model Evaluation Notebook:</strong> Calculates performance metrics and provides insights into model performance.</li>
+                <li><strong>Deployment Scripts:</strong> Include AWS Lambda function integration with S3 bucket for model deployment. GitHub Actions workflows automate the CI/CD process for seamless deployment.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Key Skills Utilized</h2>
+            <ul>
+                <li>Data Analysis and Visualization</li>
+                <li>Data Preprocessing and Cleaning</li>
+                <li>Machine Learning Model Development</li>
+                <li>Model Evaluation and Performance Metrics</li>
+                <li>Deployment on AWS Lambda and S3</li>
+                <li>CI/CD with GitHub Actions</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Feel free to explore the project repository for detailed code implementation and instructions
