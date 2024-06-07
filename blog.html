@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Telco Customer Churn Prediction Project</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -14,12 +15,6 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
         }
 
         header {
@@ -51,11 +46,10 @@
 
         .showcase {
             min-height: 400px;
-            background: url('assets/images/') no-repeat center center/cover;
+            background: url('assets/images/showcase.jpg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding-top: 100px;
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
             position: relative;
         }
 
@@ -107,36 +101,6 @@
             transform: scale(1.05);
         }
 
-        .section h2 {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-
-        .section p {
-            color: #555;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .section ul li {
-            background: #f4f4f4;
-            margin: 5px 0;
-            padding: 10px;
-            border-left: #77A3A0 5px solid;
-            font-size: 16px;
-            transition: background 0.2s;
-        }
-
-        .section ul li:hover {
-            background: #e0e0e0;
-        }
-
         footer {
             background: #282c34;
             color: #fff;
@@ -159,6 +123,7 @@
         a:hover {
             color: #5d8378;
         }
+
     </style>
 </head>
 
@@ -171,65 +136,89 @@
     </section>
 
     <div class="container">
-        <section class="section">
-            <h2>Project Overview</h2>
-            <img src="assets/images/project_overview.jpg" alt="Project Overview">
-            <p>This project revolves around predicting customer churn in a telecommunications company using machine learning. The project follows a structured workflow encompassing exploratory data analysis (EDA), data ingestion, transformation, validation, cleaning, model building, evaluation, and performance metrics calculation. Additionally, the model is deployed using AWS Lambda function with S3 bucket integration and GitHub Actions for automation.</p>
+        <section class="section row align-items-center">
+            <div class="col-md-6">
+                <h2>Project Overview</h2>
+                <img src="assets/images/project_overview.jpg" alt="Project Overview">
+            </div>
+            <div class="col-md-6">
+                <p>This project revolves around predicting customer churn in a telecommunications company using machine learning. The project follows a structured workflow encompassing exploratory data analysis (EDA), data ingestion, transformation, validation, cleaning, model building, evaluation, and performance metrics calculation. Additionally, the model is deployed using AWS Lambda function with S3 bucket integration and GitHub Actions for automation.</p>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Exploratory Data Analysis (EDA)</h2>
-            <img src="assets/images/eda.avif" alt="Exploratory Data Analysis">
-            <p>This initial phase involves exploring the dataset to gain insights into customer behavior, identify patterns, and understand the distribution of features. Visualizations and statistical analysis aid in uncovering relevant trends.</p>
+        <section class="section row align-items-center">
+            <div class="col-md-6">
+                <h2>Exploratory Data Analysis (EDA)</h2>
+                <img src="assets/images/eda.avif" alt="Exploratory Data Analysis">
+            </div>
+            <div class="col-md-6">
+                <p>This initial phase involves exploring the dataset to gain insights into customer behavior, identify patterns, and understand the distribution of features. Visualizations and statistical analysis aid in uncovering relevant trends.</p>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Data Ingestion, Transformation, Validation, and Cleaning</h2>
-            <img src="assets/images/data_ingestion.png" alt="Data Cleaning">
-            <p>Data is ingested from various sources and undergoes transformation to ensure consistency and compatibility. Validation checks are performed to identify and handle missing values, outliers, and inconsistencies. Cleaning procedures involve data preprocessing steps such as encoding categorical variables, feature scaling, and handling imbalanced classes.</p>
+        <section class="section row align-items-center">
+            <div class="col-md-6">
+                <h2>Data Ingestion, Transformation, Validation, and Cleaning</h2>
+                <img src="assets/images/data_ingestion.png" alt="Data Cleaning">
+            </div>
+            <div class="col-md-6">
+                <p>Data is ingested from various sources and undergoes transformation to ensure consistency and compatibility. Validation checks are performed to identify and handle missing values, outliers, and inconsistencies. Cleaning procedures involve data preprocessing steps such as encoding categorical variables, feature scaling, and handling imbalanced classes.</p>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Model Building</h2>
-            <img src="assets/images/model_build.png" alt="Model Building">
-            <p>Machine learning models are trained on the preprocessed dataset to predict customer churn. Various algorithms such as logistic regression, decision trees, random forests, and gradient boosting are explored to identify the best-performing model.</p>
+        <section class="section row align-items-center">
+            <div class="col-md-6">
+                <h2>Model Building</h2>
+                <img src="assets/images/model_build.png" alt="Model Building">
+            </div>
+            <div class="col-md-6">
+                <p>Machine learning models are trained on the preprocessed dataset to predict customer churn. Various algorithms such as logistic regression, decision trees, random forests, and gradient boosting are explored to identify the best-performing model.</p>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Model Evaluation</h2>
-            <img src="assets/images/model_evaluation.png" alt="Model Evaluation">
-            <p>The trained models are evaluated using performance metrics such as accuracy, precision, recall, F1-score, and ROC-AUC to assess their effectiveness in predicting churn.</p>
+        <section class="section row align-items-center">
+            <div class="col-md-6">
+                <h2>Model Evaluation</h2>
+                <img src="assets/images/model_evaluation.png" alt="Model Evaluation">
+            </div>
+            <div class="col-md-6">
+                <p>The trained models are evaluated using performance metrics such as accuracy, precision, recall, F1-score, and ROC-AUC to assess their effectiveness in predicting churn.</p>
+            </div>
         </section>
 
-        <section class="section">
-            <h2>Model Deployment</h2>
-            <img src="assets/images/model_deployment.png" alt="Model Deployment">
-            <p>The selected model is deployed using AWS Lambda function, allowing for real-time predictions. Integration with an S3 bucket facilitates data storage and retrieval. GitHub Actions are employed for continuous integration and deployment (CI/CD) to automate the deployment process.</p>
+        <section class="section row align-items-center">
+            <div class="col-md-6">
+                <h2>Model Deployment</h2>
+                <img src="assets/images/deploy.jpeg" alt="Model Deployment">
+            </div>
+            <div class="col-md-6">
+                <p class="lead">The selected model is deployed using Amazon Elastic Container Registry (ECR) for managing Docker container images, allowing for real-time predictions. Integration with an S3 bucket facilitates data storage and retrieval, while Amazon Elastic Compute Cloud (EC2) instances provide scalable computing power. GitHub Actions are employed for continuous integration and deployment (CI/CD) to automate the deployment process.</p>
+            </div>
         </section>
 
         <section class="section">
             <h2>Solution Implemented</h2>
-            <ul>
-                <li><strong>EDA Notebook:</strong> Contains exploratory data analysis, visualizations, and statistical summaries.</li>
-                <li><strong>Data Preprocessing Script:</strong> Performs data ingestion, transformation, validation, and cleaning tasks to prepare the dataset for modeling.</li>
-                <li><strong>Model Building Script:</strong> Implements machine learning algorithms, trains models, and evaluates their performance using cross-validation techniques.</li>
-                <li><strong>Model Evaluation Notebook:</strong> Calculates performance metrics and provides insights into model performance.</li>
-                <li><strong>Deployment Scripts:</strong> Include AWS Lambda function integration with S3 bucket for model deployment. GitHub Actions workflows automate the CI/CD process for seamless deployment.</li>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>EDA Notebook:</strong> Contains exploratory data analysis, visualizations, and statistical summaries.</li>
+                <li class="list-group-item"><strong>Data Preprocessing Script:</strong> Performs data ingestion, transformation, validation, and cleaning tasks to prepare the dataset for modeling.</li>
+                <li class="list-group-item"><strong>Model Building Script:</strong> Implements machine learning algorithms, trains models, and evaluates their performance using cross-validation techniques.</li>
+                <li class="list-group-item"><strong>Model Evaluation Notebook:</strong> Calculates performance metrics and provides insights into model performance.</li>
+                <li class="list-group-item"><strong>Deployment Scripts:</strong> Include AWS Lambda function integration with S3 bucket for model deployment. GitHub Actions workflows automate the CI/CD process for seamless deployment.</li>
             </ul>
         </section>
 
         <section class="section">
             <h2>Key Skills Utilized</h2>
-            <ul>
-                <li>Data Analysis and Visualization</li>
-                <li>Data Preprocessing and Cleaning</li>
-                <li>Machine Learning Model Development</li>
-                <li>Model Evaluation and Performance Metrics</li>
-                <li>Deployment on AWS Lambda and S3</li>
-                <li>CI/CD with GitHub Actions</li>
+            <ul class="list-group">
+                <li class="list-group-item">Data Analysis and Visualization</li>
+                <li class="list-group-item">Data Preprocessing and Cleaning</li>
+                <li class="list-group-item">Machine Learning Model Development</li>
+                <li class="list-group-item">Model Evaluation and Performance Metrics</li>
+                <li class="list-group-item">Deployment on AWS Lambda and S3</li>
+                <li class="list-group-item">CI/CD with GitHub Actions</li>
             </ul>
         </section>
     </div>
 
     <footer>
-        <p>Feel free to explore the project repository for detailed code implementation and instructions
+        <p>Feel free to explore the project repository for detailed code implementation and instructions.</p
