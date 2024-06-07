@@ -6,19 +6,26 @@
   <title>Sensor Fault Detection Blog</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
     }
 
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       text-align: center;
+      font-family: 'Roboto', sans-serif;
+      color: #007bff;
     }
 
     section {
@@ -28,6 +35,8 @@
     section h2 {
       border-bottom: 1px solid #ccc;
       padding-bottom: 10px;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
     }
 
     section p {
@@ -85,30 +94,17 @@
 
   <section class="data-collections">
     <h2>Data Collections</h2>
-    <img src="path_to_your_image.jpg" alt="Data Collections">
+    <img src="assets/images/data_collection.png" alt="Data Collections">
   </section>
 
   <section class="project-architecture">
     <h2>Project Architecture</h2>
-    <img src="path_to_your_image.jpg" alt="Project Architecture">
+    <img src="assets/images/project_architecture.png" alt="Project Architecture">
   </section>
 
   <section class="deployment-architecture">
     <h2>Deployment Architecture</h2>
-    <img src="path_to_your_image.jpg" alt="Deployment Architecture">
-  </section>
-
-  <section class="how-to-run">
-    <h2>How to Run?</h2>
-    <ol>
-      <li>Clone the repository: <code>git clone https://github.com/amogh9792/livesensor.git</code></li>
-      <li>Create a conda environment after opening the repository: <code>conda create -n sensor python=3.7.6 -y</code></li>
-      <li>Install the requirements: <code>pip install -r requirements.txt</code></li>
-      <li>Export the environment variables</li>
-      <li>Run the application server: <code>python app.py</code></li>
-      <li>Train application: <a href="http://localhost:8080/train">http://localhost:8080/train</a></li>
-      <li>Prediction application: <a href="http://localhost:8080/predict">http://localhost:8080/predict</a></li>
-    </ol>
+    <img src="assets/images/sensor_deploy.png" alt="Deployment Architecture">
   </section>
 </div>
 
