@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Fault Detection Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    section h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    section p {
+      line-height: 1.6;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Sensor Fault Detection</h1>
+  </header>
+
+  <section class="problem-statement">
+    <h2>Problem Statement</h2>
+    <p>The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.</p>
+  </section>
+
+  <section class="solution-proposed">
+    <h2>Solution Proposed</h2>
+    <p>In this project, the system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as braking and gear changes. The datasets positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.</p>
+  </section>
+
+  <section class="tech-stack">
+    <h2>Tech Stack Used</h2>
+    <ul>
+      <li>Python</li>
+      <li>FastAPI</li>
+      <li>Machine learning algorithms</li>
+      <li>Docker</li>
+      <li>MongoDB</li>
+    </ul>
+  </section>
+
+  <section class="infrastructure">
+    <h2>Infrastructure Required</h2>
+    <ul>
+      <li>AWS S3</li>
+      <li>AWS EC2</li>
+      <li>AWS ECR</li>
+      <li>Git Actions</li>
+      <li>Terraform</li>
+    </ul>
+  </section>
+
+  <section class="data-collections">
+    <h2>Data Collections</h2>
+    <img src="path_to_your_image.jpg" alt="Data Collections">
+  </section>
+
+  <section class="project-architecture">
+    <h2>Project Architecture</h2>
+    <img src="path_to_your_image.jpg" alt="Project Architecture">
+  </section>
+
+  <section class="deployment-architecture">
+    <h2>Deployment Architecture</h2>
+    <img src="path_to_your_image.jpg" alt="Deployment Architecture">
+  </section>
+
+  <section class="how-to-run">
+    <h2>How to Run?</h2>
+    <ol>
+      <li>Clone the repository: <code>git clone https://github.com/amogh9792/livesensor.git</code></li>
+      <li>Create a conda environment after opening the repository: <code>conda create -n sensor python=3.7.6 -y</code></li>
+      <li>Install the requirements: <code>pip install -r requirements.txt</code></li>
+      <li>Export the environment variables</li>
+      <li>Run the application server: <code>python app.py</code></li>
+      <li>Train application: <a href="http://localhost:8080/train">http://localhost:8080/train</a></li>
+      <li>Prediction application: <a href="http://localhost:8080/predict">http://localhost:8080/predict</a></li>
+    </ol>
+  </section>
+</div>
+
+</body>
+</html>
