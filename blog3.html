@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Generation Project</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .project-details {
+            margin-bottom: 20px;
+        }
+
+        .project-details h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .project-details p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .diagram {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .diagram img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog Generation Project</h1>
+    </header>
+
+    <main>
+        <div class="project-details">
+            <h2>Project Overview</h2>
+            <p>This project utilizes the Llama 2 language model to dynamically generate blog content tailored to specific topics, word counts, and target audiences. The system architecture includes:</p>
+            <ul>
+                <li>Integration of Llama 2 using LangChain library.</li>
+                <li>Data ingestion and preprocessing for prompt creation.</li>
+                <li>Generation of blog posts based on user inputs.</li>
+                <li>Deployment and automation using AWS Lambda and GitHub Actions.</li>
+            </ul>
+        </div>
+
+        <div class="diagram">
+            <h2>System Architecture Diagram</h2>
+            <img src="system_architecture_diagram.png" alt="System Architecture Diagram">
+        </div>
+
+        <div class="diagram">
+            <h2>Data Flow Diagram</h2>
+            <img src="data_flow_diagram.png" alt="Data Flow Diagram">
+        </div>
+
+        <div class="project-details">
+            <h2>Project Details</h2>
+            <p>This project encompasses a structured workflow involving:</p>
+            <ul>
+                <li>Exploratory data analysis (EDA) for understanding user input patterns.</li>
+                <li>Prompt template creation to guide Llama 2 for content generation.</li>
+                <li>Model evaluation and fine-tuning for optimal performance.</li>
+                <li>Integration with Streamlit for user-friendly web interface.</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
