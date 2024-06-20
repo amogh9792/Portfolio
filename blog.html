@@ -15,6 +15,36 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            animation: peel 1s ease forwards;
+        }
+
+        @keyframes peel {
+            0% {
+                transform: perspective(1000px) rotateX(-120deg) rotateY(30deg) translateX(300px) translateY(-300px);
+                transform-origin: top right;
+                opacity: 0;
+            }
+            100% {
+                transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0) translateY(0);
+                transform-origin: top right;
+                opacity: 1;
+            }
+        }
+
+        @keyframes contentLoad {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header, .section, footer {
+            animation: contentLoad 1s ease-in-out forwards;
+            animation-delay: 1s;
         }
 
         header {
@@ -123,11 +153,21 @@
         a:hover {
             color: #5d8378;
         }
-
     </style>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <section class="showcase">
         <div class="container">
             <h1>Predicting Customer Churn in Telecom</h1>
@@ -221,4 +261,8 @@
     </div>
 
     <footer>
-        <p>Feel free to explore the project repository for detailed code implementation and instructions.</p
+        <p>Feel free to explore the project repository for detailed code implementation and instructions.</p>
+    </footer>
+</body>
+
+</html>

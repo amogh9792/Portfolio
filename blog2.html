@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sensor Fault Detection Blog</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -20,11 +22,14 @@
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      opacity: 0; /* Initially hide the entire container */
+      animation: fadeIn 1s forwards; /* Animation to fade in container */
     }
 
-    .container:hover {
-      transform: scale(1.02);
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     header h1 {
@@ -39,11 +44,16 @@
       padding: 20px;
       border-radius: 8px;
       background-color: #f1f1f1;
-      transition: background-color 0.3s;
+      opacity: 0; /* Initially hide each section */
+      transform: translateY(20px); /* Move sections down slightly */
+      animation: slideIn 0.5s forwards;
     }
 
-    section:hover {
-      background-color: #e9ecef;
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     section h2 {
@@ -52,19 +62,18 @@
       font-family: 'Roboto', sans-serif;
       color: #333;
       margin-bottom: 10px;
-      transition: color 0.3s;
     }
 
-    section:hover h2 {
-      color: #007bff;
+    section p,
+    section ul,
+    section img,
+    .image-caption {
+      opacity: 0; /* Initially hide each element inside section */
+      transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
     }
 
-    section p {
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
-    ul, ol {
+    ul,
+    ol {
       padding-left: 20px;
       margin-bottom: 10px;
     }
@@ -89,63 +98,88 @@
     }
   </style>
 </head>
+
 <body>
 
-<div class="container">
-  <header>
-    <h1>Sensor Fault Detection</h1>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Sensor Fault Detection</h1>
+    </header>
 
-  <section class="problem-statement">
-    <h2>Problem Statement</h2>
-    <p>The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.</p>
-  </section>
+    <section class="problem-statement">
+      <h2>Problem Statement</h2>
+      <p>The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.</p>
+    </section>
 
-  <section class="solution-proposed">
-    <h2>Solution Proposed</h2>
-    <p>In this project, the system in focus is the Air Pressure System (APS) which generates pressurized air that is utilized in various functions in a truck, such as braking and gear changes. The datasets' positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.</p>
-  </section>
+    <section class="solution-proposed">
+      <h2>Solution Proposed</h2>
+      <p>In this project, the system in focus is the Air Pressure System (APS) which generates pressurized air that is utilized in various functions in a truck, such as braking and gear changes. The datasets' positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.</p>
+    </section>
 
-  <section class="tech-stack">
-    <h2>Tech Stack Used</h2>
-    <ul>
-      <li>Python</li>
-      <li>FastAPI</li>
-      <li>Machine Learning Algorithms</li>
-      <li>Docker</li>
-      <li>MongoDB</li>
-    </ul>
-  </section>
+    <section class="tech-stack">
+      <h2>Tech Stack Used</h2>
+      <ul>
+        <li>Python</li>
+        <li>FastAPI</li>
+        <li>Machine Learning Algorithms</li>
+        <li>Docker</li>
+        <li>MongoDB</li>
+      </ul>
+    </section>
 
-  <section class="infrastructure">
-    <h2>Infrastructure Required</h2>
-    <ul>
-      <li>AWS S3</li>
-      <li>AWS EC2</li>
-      <li>AWS ECR</li>
-      <li>Git Actions</li>
-      <li>Terraform</li>
-    </ul>
-  </section>
+    <section class="infrastructure">
+      <h2>Infrastructure Required</h2>
+      <ul>
+        <li>AWS S3</li>
+        <li>AWS EC2</li>
+        <li>AWS ECR</li>
+        <li>Git Actions</li>
+        <li>Terraform</li>
+      </ul>
+    </section>
 
-  <section class="data-collections">
-    <h2>Data Collections</h2>
-    <img src="assets/images/data_collection.png" alt="Data Collections">
-    <div class="image-caption">Diagram illustrating the process of data collection from various sensors and its flow into the system.</div>
-  </section>
+    <section class="data-collections">
+      <h2>Data Collections</h2>
+      <img src="assets/images/data_collection.png" alt="Data Collections">
+      <div class="image-caption">Diagram illustrating the process of data collection from various sensors and its flow into the system.</div>
+    </section>
 
-  <section class="project-architecture">
-    <h2>Project Architecture</h2>
-    <img src="assets/images/project_architecture.png" alt="Project Architecture">
-    <div class="image-caption">High-level overview of the project architecture, showing the interaction between different components and data flow.</div>
-  </section>
+    <section class="project-architecture">
+      <h2>Project Architecture</h2>
+      <img src="assets/images/project_architecture.png" alt="Project Architecture">
+      <div class="image-caption">High-level overview of the project architecture, showing the interaction between different components and data flow.</div>
+    </section>
 
-  <section class="deployment-architecture">
-    <h2>Deployment Architecture</h2>
-    <img src="assets/images/sensor_deploy.png" alt="Deployment Architecture">
-    <div class="image-caption">Deployment architecture detailing how the system is deployed in a production environment using various AWS services.</div>
-  </section>
-</div>
+    <section class="deployment-architecture">
+      <h2>Deployment Architecture</h2>
+      <img src="assets/images/sensor_deploy.png" alt="Deployment Architecture">
+      <div class="image-caption">Deployment architecture detailing how the system is deployed in a production environment using various AWS services.</div>
+    </section>
+  </div>
 
+  <script>
+    // Function to animate content within sections
+    function animateSections() {
+      const sections = document.querySelectorAll('section');
+
+      sections.forEach(section => {
+        // Get all elements within the current section
+        const elements = section.querySelectorAll('p, ul, img, .image-caption');
+
+        elements.forEach((element, index) => {
+          // Delay each element's animation
+          setTimeout(() => {
+            element.style.opacity = '1';
+          }, index * 200); // Adjust timing here (200ms delay between each element)
+        });
+      });
+    }
+
+    // Call the function after the page has loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      animateSections();
+    });
+  </script>
 </body>
+
 </html>
