@@ -94,6 +94,24 @@
 
 }
 
+/* KEY FRAMES FOLD EFFECT */
+
+@keyframes peel {
+  0% {
+    transform: perspective(1000px) rotateX(-120deg) rotateY(30deg) translateX(300px) translateY(-300px);
+    transform-origin: top right;
+    opacity: 0;
+  }
+  100% {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0) translateY(0);
+    transform-origin: top right;
+    opacity: 1;
+  }
+}
+body {
+  animation: peel 1s ease forwards;
+}
+
 
 
 
