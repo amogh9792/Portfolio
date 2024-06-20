@@ -5,32 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Generation Project</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Basic styling */
+        /* Reset and basic styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #f0f0f0;
-            padding: 20px;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
         }
 
+        /* Header styling */
         header {
             background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
+            padding: 20px 0;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 24px;
+            font-size: 28px;
+            margin: 0;
+            letter-spacing: 1px;
         }
 
+        /* Main content styling */
         main {
-            background-color: #fff;
+            background-color: #222;
             padding: 20px;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 800px;
             overflow: hidden;
             position: relative;
             transform: perspective(1000px) rotateY(0deg);
@@ -47,30 +53,58 @@
             }
         }
 
-        .project-details {
+        .card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
             margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .project-details h2 {
-            font-size: 20px;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            font-size: 24px;
             margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            color: #fff;
         }
 
-        .project-details p {
+        .card p {
             font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 10px;
+            line-height: 1.8;
+            color: #ddd;
         }
 
+        .card ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #ddd;
+        }
+
+        /* Diagram styling */
         .diagram {
-            margin-bottom: 20px;
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .diagram h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            color: #fff;
         }
 
         .diagram img {
             max-width: 100%;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -81,7 +115,7 @@
     </header>
 
     <main id="main-content">
-        <div class="project-details">
+        <div class="card">
             <h2>Project Overview</h2>
             <p>This project utilizes the Llama 2 language model to dynamically generate blog content tailored to specific topics, word counts, and target audiences. The system architecture includes:</p>
             <ul>
@@ -92,17 +126,17 @@
             </ul>
         </div>
 
-        <div class="diagram">
+        <div class="diagram card">
             <h2>System Architecture Diagram</h2>
             <img src="assets/images/system_architecture.png" alt="System Architecture Diagram">
         </div>
 
-        <div class="diagram">
+        <div class="diagram card">
             <h2>Data Flow Diagram</h2>
             <img src="assets/images/dfd.png" alt="Data Flow Diagram">
         </div>
 
-        <div class="project-details">
+        <div class="card">
             <h2>Project Details</h2>
             <p>This project encompasses a structured workflow involving:</p>
             <ul>
