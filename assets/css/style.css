@@ -1427,6 +1427,35 @@ main {
 
   .clients-item { min-width: calc(33.33% - 35px); }
 
+/* Media query for phones (typical portrait orientation) */
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+  /* Your CSS rules for phones go here */
+  /* Example styles: */
+  body {
+      font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .container {
+      width: 100%; /* Make sure content stretches to full width */
+      padding: 10px; /* Adjust padding for content spacing */
+  }
+
+  .navbar {
+      /* Adjust navbar styles for smaller screens */
+      background-color: #333; /* Example background color */
+  }
+
+  .section {
+      /* Adjust section styles for smaller screens */
+      padding: 15px;
+      margin-bottom: 20px;
+  }
+
+  .section h2 {
+      font-size: 24px; /* Example font size adjustment for headings */
+  }
+
+}
 
 
   /**
