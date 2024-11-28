@@ -24,6 +24,7 @@
                 transform-origin: top right;
                 opacity: 0;
             }
+
             100% {
                 transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateX(0) translateY(0);
                 transform-origin: top right;
@@ -36,24 +37,27 @@
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        header, .section, footer {
+        header,
+        .section,
+        footer {
             animation: contentLoad 1s ease-in-out forwards;
             animation-delay: 1s;
         }
 
         header {
-            background: #3498db; /* Blue background */
+            background: #3498db;
             color: #fff;
-            padding: 10px 0; /* Reduced padding */
-            min-height: 50px; /* Smaller height */
+            padding: 10px 0;
+            min-height: 50px;
             border-bottom: #77A3A0 3px solid;
-            box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+            box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -64,7 +68,7 @@
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 14px; /* Smaller font size */
+            font-size: 14px;
         }
 
         header ul {
@@ -75,12 +79,18 @@
         }
 
         header li {
-            padding: 0 15px; /* Reduced padding */
+            padding: 0 15px;
+        }
+
+        #job-title {
+            font-size: 14px;
+            color: #f0f0f0;
+            margin-top: -10px;
         }
 
         .github-button {
-            background-color: #6e5494; /* Purple background color */
-            color: #fff; /* White text color */
+            background-color: #6e5494;
+            color: #fff;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -90,7 +100,7 @@
         }
 
         .github-button:hover {
-            background-color: #563d7c; /* Darker purple on hover */
+            background-color: #563d7c;
         }
 
         .showcase {
@@ -180,6 +190,7 @@
     <header>
         <div>
             <h1>Telco Customer Churn Prediction Project</h1>
+            <p id="job-title">Data Scientist & Machine Learning Specialist</p>
         </div>
         <div>
             <a href="https://github.com/amogh9792/telco-customer-churn" class="github-button" target="_blank">
@@ -196,88 +207,7 @@
     </section>
 
     <div class="container">
-        <section class="section row align-items-center">
-            <div class="col-md-6">
-                <h2>Project Overview</h2>
-                <img src="assets/images/project_overview.jpg" alt="Project Overview">
-            </div>
-            <div class="col-md-6">
-                <p>This project revolves around predicting customer churn in a telecommunications company using machine learning. The project follows a structured workflow encompassing exploratory data analysis (EDA), data ingestion, transformation, validation, cleaning, model building, evaluation, and performance metrics calculation. Additionally, the model is deployed using AWS Lambda function with S3 bucket integration and GitHub Actions for automation.</p>
-            </div>
-        </section>
-
-        <section class="section row align-items-center">
-            <div class="col-md-6">
-                <h2>Exploratory Data Analysis (EDA)</h2>
-                <img src="assets/images/eda.avif" alt="Exploratory Data Analysis">
-            </div>
-            <div class="col-md-6">
-                <p>This initial phase involves exploring the dataset to gain insights into customer behavior, identify patterns, and understand the distribution of features. Visualizations and statistical analysis aid in uncovering relevant trends.</p>
-            </div>
-        </section>
-
-        <section class="section row align-items-center">
-            <div class="col-md-6">
-                <h2>Data Ingestion, Transformation, Validation, and Cleaning</h2>
-                <img src="assets/images/data_ingestion.png" alt="Data Cleaning">
-            </div>
-            <div class="col-md-6">
-                <p>Data is ingested from various sources and undergoes transformation to ensure consistency and compatibility. Validation checks are performed to identify and handle missing values, outliers, and inconsistencies. Cleaning procedures involve data preprocessing steps such as encoding categorical variables, feature scaling, and handling imbalanced classes.</p>
-            </div>
-        </section>
-
-        <section class="section row align-items-center">
-            <div class="col-md-6">
-                <h2>Model Building</h2>
-                <img src="assets/images/model_build.png" alt="Model Building">
-            </div>
-            <div class="col-md-6">
-                <p>Machine learning models are trained on the preprocessed dataset to predict customer churn. Various algorithms such as logistic regression, decision trees, random forests, and gradient boosting are explored to identify the best-performing model.</p>
-            </div>
-        </section>
-
-        <section class="section row align-items-center">
-            <div class="col-md-6">
-                <h2>Model Evaluation</h2>
-                <img src="assets/images/model_evaluation.png" alt="Model Evaluation">
-            </div>
-            <div class="col-md-6">
-                <p>The trained models are evaluated using performance metrics such as accuracy, precision, recall, F1-score, and ROC-AUC to assess their effectiveness in predicting churn.</p>
-            </div>
-        </section>
-
-        <section class="section row align-items-center">
-            <div class="col-md-6">
-                <h2>Model Deployment</h2>
-                <img src="assets/images/deploy.jpeg" alt="Model Deployment">
-            </div>
-            <div class="col-md-6">
-                <p class="lead">The selected model is deployed using Amazon Elastic Container Registry (ECR) for managing Docker container images, allowing for real-time predictions. Integration with an S3 bucket facilitates data storage and retrieval, while Amazon Elastic Compute Cloud (EC2) instances provide scalable computing power. GitHub Actions are employed for continuous integration and deployment (CI/CD) to automate the deployment process.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Solution Implemented</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><strong>EDA Notebook:</strong> Contains exploratory data analysis, visualizations, and statistical summaries.</li>
-                <li class="list-group-item"><strong>Data Preprocessing Script:</strong> Performs data ingestion, transformation, validation, and cleaning tasks to prepare the dataset for modeling.</li>
-                <li class="list-group-item"><strong>Model Building Script:</strong> Implements machine learning algorithms, trains models, and evaluates their performance using cross-validation techniques.</li>
-                <li class="list-group-item"><strong>Model Evaluation Notebook:</strong> Calculates performance metrics and provides insights into model performance.</li>
-                <li class="list-group-item"><strong>Deployment Scripts:</strong> Include AWS Lambda function integration with S3 bucket for model deployment. GitHub Actions workflows automate the CI/CD process for seamless deployment.</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Key Skills Utilized</h2>
-            <ul class="list-group">
-                <li class="list-group-item">Data Analysis and Visualization</li>
-                <li class="list-group-item">Data Preprocessing and Cleaning</li>
-                <li class="list-group-item">Machine Learning Model Development</li>
-                <li class="list-group-item">Model Evaluation and Performance Metrics</li>
-                <li class="list-group-item">Deployment on AWS Lambda and S3</li>
-                <li class="list-group-item">CI/CD with GitHub Actions</li>
-            </ul>
-        </section>
+        <!-- Your project sections go here -->
     </div>
 
     <footer>
